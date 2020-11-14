@@ -1,0 +1,58 @@
+body{
+    color: #0E6497;
+   
+}
+li{
+    display: inline-block;
+     margin-left: 10px;
+     margin-right: 10px;
+}
+ul{
+    text-align: center;
+}
+button{
+    color:#0E6497;
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size:18px; 
+    line-height:18px; 
+    vertical-align: auto;
+}
+
+#content{
+    background-color: #EAB549; 
+}
+
+
+button div{
+    display: inline-block;
+    align-items: center;
+    vertical-align: middle;
+}
+#content div{
+
+    text-align: center;
+}
+h1{
+    color: #0E6497;
+    background-color: #EAB549;
+}
+h2{
+    color: #0E6497;
+   
+}
+.naranja{
+    background-color: #EAB549;
+}
+
+.grande{
+    font-size: 50px;
+    margin-top: 10px;
+}
+.azul{
+    color:#0E6497;
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size:30px; 
+    line-height :initial;
+    line-height:30px; 
+    vertical-align: middle;
+}

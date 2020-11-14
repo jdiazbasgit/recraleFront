@@ -1,0 +1,73 @@
+<header class="container">
+    
+ 
+    <div  class="centro">
+      <a href="index.html"><img src="assets/imagenes/logosolo.png" width="281" height="172"></a>
+    </div>
+ 
+    <div style="align-items: center; margin-left: 100px; ">
+    <div style="text-align: center;vertical-align: text-bottom;">
+      <h1>Calle Albasanz 62 - 28037 MADRID </h1>
+    <h1><mat-icon>phone</mat-icon> 913770677  <img src="assets/imagenes/whatsapp.png"> 609208499</h1>
+    
+      <h1><mat-icon>mail</mat-icon> <a href="mailto:">recrale@recrale.com</a></h1> 
+    </div>
+  </div>
+    <ul>
+
+      <li>
+        <button mat-icon-button routerLink="/" >
+          <div><mat-icon>home</mat-icon></div><div> INICIO</div> 
+         </button>
+         
+      </li>
+      <li>
+        <button mat-icon-button onclick="" >
+          <div><mat-icon>thumb_up</mat-icon><div></div> PROGESRALE</div>
+         </button>
+        
+      </li>
+      <li>
+        <button mat-icon-button [matMenuTriggerFor]="menu" > 
+          <div><mat-icon>build</mat-icon></div><div> SERVICIOS</div>
+         </button>
+         <mat-menu #menu="matMenu">
+           <button mat-menu-item routerLink="/rectificados">
+            
+             <span>RECTIFICADO DE MOTORES</span>
+           </button>
+           <button mat-menu-item routerLink="/planificado"> 
+            
+             <span>PLANIFICADO DE CULATAS</span>
+           </button>
+           <button mat-menu-item routerLink="/recambios">
+             
+             <span>RECAMBIOS Y REPUESTOS</span>
+           </button>
+           <button mat-menu-item routerLink="/torno">
+            
+            <span>TORNO Y FRESA</span>
+          </button>
+          
+           <button mat-menu-item routerLink="/mecanizado">
+               
+            <span>MECANIZADO DISCO TAMBOR</span>
+          </button>
+          <button mat-menu-item routerLink="/extraccion">
+             
+            <span>EXTRACCIÓN DE INYECTORES Y CALENTADORES</span>
+          </button>
+          <button mat-menu-item routerLink="/helicoils">
+              
+            <span>INSERCIÓN DE HELICOILS</span>
+          </button>
+         </mat-menu>
+      </li>
+      <li>
+        <button mat-icon-button routerLink="/noticias" >
+          <div><mat-icon>import_contacts</mat-icon></div><div>NOTICIAS</div>
+         </button>
+      </li>
+    </ul>
+  
+  </header>
