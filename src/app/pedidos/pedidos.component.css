@@ -1,0 +1,22 @@
+h1{
+    color: white;
+    margin: 20px;
+    text-align: center; 
+    font-size: 50px;
+    line-height :initial;
+}
+textarea{
+    height: 100px;
+    width: 100%;
+}
+.todo{
+    width: 80%;
+    
+}
+.texto{
+    color: #0E6497;
+    margin: 20px;
+    text-align: center; 
+    font-size: 20px;
+    line-height :initial;
+}

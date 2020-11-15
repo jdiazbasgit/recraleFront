@@ -21,7 +21,12 @@ import { TarjetaComponent } from './tarjeta.component';
 
 import { AccesoComponent } from './acceso/acceso.component';
 import {FormsModule} from '@angular/forms';
+import { PedidosComponent } from './pedidos/pedidos.component';
 
+
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatHint } from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -38,8 +43,8 @@ import {FormsModule} from '@angular/forms';
     HelicoilsComponent,
     NoticiasComponent,
     TarjetaComponent,
-    AccesoComponent
- 
+    AccesoComponent,
+    PedidosComponent
   ],
   imports: [
     BrowserModule,
@@ -47,6 +52,9 @@ import {FormsModule} from '@angular/forms';
     BrowserAnimationsModule,
     MatMenuModule,
     MatIconModule,
+    FormsModule,
+    MatInputModule,
+    MatButtonModule
    
   ],
   providers: [],

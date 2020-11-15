@@ -11,6 +11,7 @@ import { TornoComponent } from './torno.component';
 import { NoticiasComponent } from './noticias.component';
 import { TarjetaComponent } from './tarjeta.component';
 import { AccesoComponent } from './acceso/acceso.component';
+import { PedidosComponent } from './pedidos/pedidos.component';
 const routes: Routes = [
   {path:'',component:HomeComponent},
   {path:'rectificados',component:RectificadosComponent},
@@ -21,8 +22,9 @@ const routes: Routes = [
   {path:'recambios',component:RecambiosComponent},
   {path:'torno',component:TornoComponent},
   {path:'noticias',component:NoticiasComponent},
-  {path:'tarjeta',component:TarjetaComponent },
-  {path:'acceso',component:AccesoComponent }
+  {path:'tarjeta',component:TarjetaComponent},
+  {path:'acceso',component:AccesoComponent},
+  {path:'pedidos',component:PedidosComponent}
   
 ];
 
