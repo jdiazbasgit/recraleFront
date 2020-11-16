@@ -1,0 +1,29 @@
+<div class="container">
+    <h1>PEDIDOS</h1>
+
+   
+    <div style="text-align: center; " > 
+        <p>
+            <mat-form-field class="ancho">
+                <input matInput [(ngModel)]="nombre" type="text" placeholder="*Nombre" >
+              </mat-form-field>
+          </p>
+          <p>
+            <mat-form-field class="ancho">
+                <input matInput [(ngModel)]="telefono" type="text" placeholder="*Teléfono">
+              </mat-form-field>
+          </p>
+          <p>
+            <mat-form-field class="ancho">
+                <input matInput [(ngModel)]="email" type="text" placeholder="*Correo Electrónico">
+              </mat-form-field>
+          </p>
+          <p>
+          <mat-form-field class="ancho">
+            <textarea matInput [(ngModel)]="pedido"
+               placeholder="*Pedido" rows="10">
+            </textarea>
+          </mat-form-field> 
+        </p>
+    </div>
+</div>

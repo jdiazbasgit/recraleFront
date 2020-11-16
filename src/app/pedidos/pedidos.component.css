@@ -2,15 +2,16 @@ body{
     color: #0E6497;
    
 }
-.centro{
-    align-self: center;
-    
+.ancho{
+    width: 100%;
 }
-@media (max-width: 300px) {
-    .centro{
-        text-align:center;
-        width: 100%;
-    }
+.azul{
+    color:#0E6497;
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size:30px; 
+    line-height :initial;
+    line-height:30px; 
+    vertical-align: middle;
 }
 li{
     display: inline-block;
@@ -20,6 +21,15 @@ li{
 ul{
     text-align: center;
 }
+img {
+
+    display: inline;
+    
+    margin: 5px;
+    
+    border: 1px solid negro;
+    
+    }
 button,a{
     color:#0E6497;
     font-family: Arial, Helvetica, sans-serif; 
@@ -37,17 +47,18 @@ header{
     background-color: white; 
     width: 100%;
     color: #0E6497;
-    padding-bottom: 5px;
-    text-align: center;
 }
+header div img{
 
+    vertical-align: text-bottom;
+}
 
 button div{
     display: inline-block;
     align-items: center;
     vertical-align: middle;
 }
-#content div{ 
+#content div{
 
     text-align: center;
 }
@@ -66,17 +77,11 @@ footer div{
 
 header div{
     display: inline-block;
-    margin:10px;
-    text-align: center;
-    align-content: center;
 }
-
-#i1{
-    vertical-align:bottom;
-    background-color: #0E6497;
-}
-#i2{
-    vertical-align:bottom;
-    text-align: right;
-   
+h1{
+    color: white;
+    margin: 20px;
+    text-align: center; 
+    font-size: 50px;
+    line-height :initial;
 }

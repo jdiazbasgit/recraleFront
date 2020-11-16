@@ -21,7 +21,9 @@ import { TarjetaComponent } from './tarjeta.component';
 
 import { AccesoComponent } from './acceso/acceso.component';
 import {FormsModule} from '@angular/forms';
-
+import { PedidosComponent } from './pedidos/pedidos.component';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button'
 
 @NgModule({
   declarations: [
@@ -38,7 +40,8 @@ import {FormsModule} from '@angular/forms';
     HelicoilsComponent,
     NoticiasComponent,
     TarjetaComponent,
-    AccesoComponent
+    AccesoComponent,
+    PedidosComponent
  
   ],
   imports: [
@@ -47,7 +50,9 @@ import {FormsModule} from '@angular/forms';
     BrowserAnimationsModule,
     MatMenuModule,
     MatIconModule,
-   
+   FormsModule,
+   MatInputModule,
+   MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
