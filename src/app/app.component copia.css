@@ -1952,7 +1952,7 @@ body {
       p {
         font-family: 'Open Sans', sans-serif;
         padding: 1em;
-        color: white;
+       
         text-align: center;
         background-color: hsla(0, 0%, 0%, 0.5);
       }
@@ -2320,7 +2320,7 @@ body {
 .slider__text-item p {
   font-family: 'Open Sans', sans-serif;
   padding: 1em;
-  color: white;
+ 
   text-align: center;
   background-color: rgba(0, 0, 0, 0.5);
 }
