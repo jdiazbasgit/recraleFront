@@ -2,11 +2,14 @@ body{
     color: #0E6497;
    
 }
+.ancho{
+    width: 100%;
+}
 .azul{
     color:#0E6497;
     font-family: Arial, Helvetica, sans-serif; 
     font-size:30px; 
-    
+    line-height :initial;
     line-height:30px; 
     vertical-align: middle;
 }

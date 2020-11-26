@@ -2,8 +2,12 @@ body{
     color: #0E6497;
    
 }
+h1{
+    background-color: white;
+}
 .centro{
-    text-align:left;
+    align-self: center;
+    
 }
 @media (max-width: 300px) {
     .centro{
@@ -37,11 +41,9 @@ header{
     width: 100%;
     color: #0E6497;
     padding-bottom: 5px;
+    text-align: center;
 }
-header div img{
 
-    vertical-align: text-bottom;
-}
 
 button div{
     display: inline-block;
@@ -67,4 +69,17 @@ footer div{
 
 header div{
     display: inline-block;
+    margin:10px;
+    text-align: center;
+    align-content: center;
+}
+
+#i1{
+    vertical-align:bottom;
+    background-color: #0E6497;
+}
+#i2{
+    vertical-align:bottom;
+    text-align: right;
+   
 }

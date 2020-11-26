@@ -67,6 +67,8 @@ header div{
 }
 h1{
     color: #0E6497;
+    background-color: white;
+
     vertical-align: middle;
     line-height :initial;
 }
