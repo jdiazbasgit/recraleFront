@@ -24,6 +24,8 @@ import {FormsModule} from '@angular/forms';
 import { PedidosComponent } from './pedidos/pedidos.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button'
+import { ConexionesService } from './conexiones.service';
+
 
 @NgModule({
   declarations: [
@@ -54,7 +56,7 @@ import { MatButtonModule } from '@angular/material/button'
    MatInputModule,
    MatButtonModule
   ],
-  providers: [],
+  providers: [ConexionesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
