@@ -1,0 +1,27 @@
+<h1 class="text-center">EMPLEADOS</h1>
+
+<table class="table table-striped table-bordered">
+    <thead>
+        <tr class="w-50">
+            <th>NOMBRE</th>
+            <th>APELLIDO</th>
+            <th>DNI</th>
+            <th>FECHA ALTA</th>
+            <th>FECHA BAJA</th>
+            <th>ACCIONES</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let empleado of empleados"  >
+            <td>{{ empleado.nombre}}</td>
+            <td>{{ empleado.apellidos}}</td>
+            <td>{{ empleado.dni}}</td>
+            <td>{{ empleado.fechaAlta | date: 'dd/MM/yyyy'}}</td>
+            <td [ngStyle]="{'background-color': empleado.fechaBaja !== null ? 'red' : 'transparent'}">{{ empleado.fechaBaja | date: 'dd/MM/yyyy'}}</td>
+            <td>
+                <button class="btn btn-primary" (click)="editarEmpleado(empleado.id)">Editar</button>
+                <button class="btn btn-danger" (click)="eliminarEmpleado(empleado.id)">Eliminar</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

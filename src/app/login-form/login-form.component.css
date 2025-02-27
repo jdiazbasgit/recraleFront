@@ -1,0 +1,28 @@
+/* login-form.component.css */
+.card {
+    border: none; /* Elimina el borde de la tarjeta */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  }
+  
+  .card-header {
+    background-color: #ADD8E6; /* Azul claro */
+  }
+  
+  .btn-warning {
+    background-color: #FFFF00; /* Amarillo */
+    border-color: #FFFF00;
+    color: #000; /* Texto negro para contraste */
+  }
+  
+  .btn-warning:hover {
+    background-color: #FFD700; /* Amarillo más oscuro al pasar el mouse */
+    border-color: #FFD700;
+  }
+  .container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+  .table {
+    margin-bottom: 0;
+  }
