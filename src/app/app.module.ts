@@ -8,12 +8,16 @@ import { FormsModule } from '@angular/forms';
 import { EmployeeComponent } from './employee/employee.component';
 import { HeaderComponent } from './header/header.component';
 import { HttpClientModule } from '@angular/common/http';
+import { JornadasComponent } from './jornadas/jornadas.component';
+import { EmpleadosjornadaComponent } from './empleadosjornada/empleadosjornada.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginFormComponent,
     EmployeeComponent,
-    HeaderComponent
+    HeaderComponent,
+    JornadasComponent,
+    EmpleadosjornadaComponent
   ],
   imports: [
     BrowserModule,

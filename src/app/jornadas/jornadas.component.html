@@ -1,0 +1,243 @@
+<h1 class="text-center">JORNADAS</h1>
+
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+    NUEVA JORNADA
+</button>
+
+<!-- Modal alta -->
+<div class="modal" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">ALTA JORNADA</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" (click)="limpiaJornada()"></button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <table class="table   w-75" align="center">
+                    <tr>
+                        <td>
+                            DESCRIPCION
+                        </td>
+                        <td>
+                            <input type="text" [(ngModel)]="jornada!.descripcion">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            LUNES
+                        </td>
+                        <td>
+                            <input type="text" [(ngModel)]=" jornada!.lunes">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            MARTES
+                        </td>
+                        <td>
+                            <input type="text" [(ngModel)]=" jornada!.martes">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            MIERCOLES
+                        </td>
+
+                        <td>
+                            <input type="text" [(ngModel)]=" jornada!.miercoles">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            JUEVES
+                        </td>
+
+                        <td>
+                            <input type="text" [(ngModel)]=" jornada!.jueves">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            VIERNES
+                        </td>
+
+                        <td>
+                            <input type="text" [(ngModel)]=" jornada!.viernes">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center">
+                            <button class="bg-success" (click)="altaJornada( jornada!)">GRABAR</button>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center">
+                            <h3 class="text-danger">{{mensaje}}</h3>
+                        </td>
+
+                    </tr>
+                </table>
+            </div>
+
+
+
+        </div>
+    </div>
+</div>
+
+<!-- Modal modificacion -->
+<div class="modal" id="myModal1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">MODIFICACION JORNADA</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" (click)="limpiaJornada()"></button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <table class="table   w-75" align="center">
+                    <tr>
+                        <td>
+                            DESCRIPCION
+                        </td>
+                        <td>
+                            <input type="text" [(ngModel)]="jornada!.descripcion">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            LUNES
+                        </td>
+                        <td>
+                            <input type="text" [(ngModel)]="jornada!.lunes">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            MARTES
+                        </td>
+                        <td>
+                            <input type="text" [(ngModel)]="jornada!.martes">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            MIERCOLES
+                        </td>
+
+                        <td>
+                            <input type="text" [(ngModel)]="jornada!.miercoles">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            JUEVES
+                        </td>
+
+                        <td>
+                            <input type="text" [(ngModel)]="jornada!.jueves">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            VIERNES
+                        </td>
+
+                        <td>
+                            <input type="text" [(ngModel)]="jornada!.viernes">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center">
+                            <button class="bg-success" (click)="editarJornada(jornada!)">GRABAR</button>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center">
+                            <h3 class="text-danger">{{mensaje}}</h3>
+                        </td>
+
+                    </tr>
+                </table>
+            </div>
+
+
+
+        </div>
+    </div>
+</div>
+
+<!-- Modal borrar -->
+<div class="modal" id="EliminarJornada">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">ELIMINAR JORNADA</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" (click)="limpiaJornada()"></button>
+            </div>
+            <!-- Modal body -->
+            <div class="modal-body">
+                <h1 class="text-center">VA A ELIMINAR LA JORNADA {{jornada?.descripcion}}</h1>
+
+                <div class="row w-100 align-items-center" >
+                    <div class="col text-center">
+                        <button class="btn btn-success center-block"
+                            (click)="eliminarJornada(jornada!)">ELIMINAR</button>
+                    </div>
+                </div>
+                <h3 class="text-danger text-center">{{mensaje}}</h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+<table class="table table-striped table-bordered ">
+    <thead>
+        <tr class="w-50">
+            <th>DESCRIPCION</th>
+            <th>LUNES</th>
+            <th>MARTES</th>
+            <th>MIERCOLES</th>
+            <th>JUEVES</th>
+            <th>VIERNES</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let jornada  of jornadas">
+            <td>{{ jornada.descripcion}}</td>
+            <td>{{ jornada.lunes}}</td>
+            <td>{{ jornada.martes}}</td>
+            <td>{{ jornada.miercoles }}</td>
+            <td>{{jornada.jueves }}</td>
+            <td>{{jornada.viernes }}</td>
+            <td align="center">
+
+                <div><a href="#" data-bs-toggle="modal" data-bs-target="#myModal1"
+                        (click)="seleccionarJornada(jornada)"><svg xmlns="http://www.w3.org/2000/svg" width="25"
+                            height="25" fill="#0d6efd" class="bi bi-pen" viewBox="0 0 16 16">
+                            <path
+                                d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001m-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708z" />
+                        </svg></a><a href="#" data-bs-toggle="modal" data-bs-target="#EliminarJornada"
+                        (click)="seleccionarJornada(jornada)"><svg xmlns="http://www.w3.org/2000/svg" width="25"
+                            height="25" fill="#dc3545" class="bi bi-trash" viewBox="0 0 16 16">
+                            <path
+                                d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z" />
+                            <path
+                                d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z" />
+                        </svg></a></div>
+            </td>
+        </tr>
+    </tbody>
+</table>
