@@ -79,7 +79,7 @@ export class JornadasComponent {
    
   }
   ngOnInit(): void {
-    this.service.dameDatos("http://localhost:8081/getJornadas").subscribe((data: any) => {
+    this.service.dameDatos("http://localhost:8081/jornadas").subscribe((data: any) => {
       this.jornadas = data as Jornada[];
     });
   }

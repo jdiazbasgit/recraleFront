@@ -1,0 +1,25 @@
+<h1 class="text-center">ACCESOS</h1>
+
+<table class="table  table-bordered w-50" align="center">
+    <thead>
+        <tr class="w-50">
+            <th>EMPLEADO</th>
+            <th>FECHA</th>
+            <th>ENTRADA</th>
+            <th>SALIDA</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let acceso  of accesosNuevos" >
+            <td>{{acceso!.empleado!.nombre}} {{acceso!.empleado!.apellidos}}</td>
+            <td>{{acceso!.fecha | date: 'dd/MM/yyyy'}}</td>
+            <td>
+                {{acceso!.horaRealEntrada | horas}}:{{acceso!.minutoRealEntrada | horas}}
+            </td>
+            <td [ngClass]="acceso.clase">
+                {{acceso!.horaRealSalida | horas}}:{{acceso!.minutoRealSalida | horas}}
+            </td>
+        </tr>
+    </tbody>
+</table>

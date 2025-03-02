@@ -72,7 +72,7 @@ export class EmployeeComponent {
    
   }
   ngOnInit(): void {
-    this.service.dameDatos("http://localhost:8081/getEmpleados").subscribe((data: any) => {
+    this.service.dameDatos("http://localhost:8081/empleados").subscribe((data: any) => {
       this.empleados = data as Employee[];
     });
   }
