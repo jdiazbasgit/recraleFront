@@ -27,7 +27,7 @@ export class EmployeeComponent {
     this.mensaje=""
   }
   eliminarEmpleado(arg0: Employee) {
-    this.service.borraDatos("http://localhost:8081/empleado", arg0).subscribe({
+    this.service.borraDatos("http://localhost/accesos1/empleado", arg0).subscribe({
       next: (response:any) => {
         this.mensaje = "EMPLEADO ELIMINADO CORRECTAMENTE"
         this.empleados!.splice(this.empleados!.indexOf(arg0), 1);
@@ -43,7 +43,7 @@ export class EmployeeComponent {
 
 
     
-      this.service.grabaDatos("http://localhost:8081/grabaEmpleado", employee).subscribe( {
+      this.service.grabaDatos("http://localhost/accesos1/grabaEmpleado", employee).subscribe( {
         next: (response:any) => {
           this.mensaje = "EMPLEADO GRABADO CORRECTAMENTE"
          
@@ -59,7 +59,7 @@ export class EmployeeComponent {
 
 
    
-      this.service.grabaDatos("http://localhost:8081/grabaEmpleado", this.employee).subscribe({
+      this.service.grabaDatos("http://localhost/accesos1/grabaEmpleado", this.employee).subscribe({
         next: (response:any) => {
           this.mensaje = "EMPLEADO GRABADO CORRECTAMENTE"
          this.empleados?.push(response)
@@ -72,7 +72,7 @@ export class EmployeeComponent {
    
   }
   ngOnInit(): void {
-    this.service.dameDatos("http://localhost:8081/empleados").subscribe((data: any) => {
+    this.service.dameDatos("http://localhost/accesos1/empleados").subscribe((data: any) => {
       this.empleados = data as Employee[];
     });
   }

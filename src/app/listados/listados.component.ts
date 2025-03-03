@@ -20,7 +20,7 @@ export class ListadosComponent {
   }
 
   getAccesos() {
-    this.service.dameDatos("http://localhost:8081/accesos").subscribe((response) => {
+    this.service.dameDatos("http://localhost/accesos1/accesos").subscribe((response) => {
       let accesos = response as Array<Acceso>;
       
       this.accesosNuevos = new Array<AccesoNuevo>();
@@ -66,7 +66,7 @@ export class ListadosComponent {
   }
   getAccesosByFecha(fecha: Date) {
     {
-      this.service.dameDatos(`http://localhost:8081/accesos/${fecha}`).subscribe((response) => {
+      this.service.dameDatos(`http://localhost/accesos1/accesos/${fecha}`).subscribe((response) => {
         this.accesos = response as Array<Acceso>;
       });
     }

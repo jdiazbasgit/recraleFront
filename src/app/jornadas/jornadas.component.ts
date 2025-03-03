@@ -29,7 +29,7 @@ export class JornadasComponent {
   }
   eliminarJornada(arg0: Jornada) {
 
-    this.service.borraDatos("http://localhost:8081/jornada", arg0).subscribe({
+    this.service.borraDatos("http://localhost/accesos1/jornada", arg0).subscribe({
       next: (response:any) => {
         this.mensaje = "JORNADA ELIMINADA CORRECTAMENTE"
         this.jornadas!.splice(this.jornadas!.indexOf(arg0), 1);
@@ -46,7 +46,7 @@ export class JornadasComponent {
     let jornada: Jornada = arg0;
     console.log(JSON.stringify(jornada))
    
-      this.service.grabaDatos("http://localhost:8081/grabaJornada", jornada).subscribe( {
+      this.service.grabaDatos("http://localhost/accesos1/grabaJornada", jornada).subscribe( {
         next: (response:any) => {
         
           this.mensaje = "JORNADA GRABADA CORRECTAMENTE"
@@ -66,7 +66,7 @@ export class JornadasComponent {
     }
 
    
-      this.service.grabaDatos("http://localhost:8081/grabaJornada", this.jornada).subscribe( {
+      this.service.grabaDatos("http://localhost/accesos1/grabaJornada", this.jornada).subscribe( {
         next: (response:any) => {
         
           this.mensaje = "JORNADA GRABADA CORRECTAMENTE"
@@ -79,7 +79,7 @@ export class JornadasComponent {
    
   }
   ngOnInit(): void {
-    this.service.dameDatos("http://localhost:8081/jornadas").subscribe((data: any) => {
+    this.service.dameDatos("http://localhost/accesos1/jornadas").subscribe((data: any) => {
       this.jornadas = data as Jornada[];
     });
   }

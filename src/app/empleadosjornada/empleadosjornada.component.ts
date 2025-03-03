@@ -39,7 +39,7 @@ export class EmpleadosjornadaComponent {
   }
 
   getEmployeeJournalsOrganizados() {
-    this.service.dameDatos("http://localhost:8081/empleadosJornada").subscribe((datos: any) => {
+    this.service.dameDatos("http://localhost/accesos1/empleadosJornada").subscribe((datos: any) => {
       this.employeeJournals = datos as Array<EmployeeJournal>;
       /*this.employeeJournals.sort((a, b) => {
         return a.employee!.apellidos.localeCompare(b.employee!.apellidos);
@@ -48,7 +48,7 @@ export class EmpleadosjornadaComponent {
     });
   }
   getEmployeesOrganizados() {
-    this.employeeService.dameDatos("http://localhost:8081/empleados").subscribe({
+    this.employeeService.dameDatos("http://localhost/accesos1/empleados").subscribe({
       next: (datos: any) => {
         this.employees = datos;
         /*this.employees.sort((a, b) => {
@@ -62,7 +62,7 @@ export class EmpleadosjornadaComponent {
   }
 
   getJournalsOrganizados() {
-    this.journalsService.dameDatos("http://localhost:8081/jornadas").subscribe({
+    this.journalsService.dameDatos("http://localhost/accesos1/jornadas").subscribe({
       next: (datos: any) => {
         this.journals = datos;
         this.journals.sort((a, b) => {
@@ -151,7 +151,7 @@ export class EmpleadosjornadaComponent {
   }
 
   borrarEmployeeJournal(id: number) {
-    this.service.borraDatos("http://localhost:8081/empleadosJornada",id).subscribe({
+    this.service.borraDatos("http://localhost/accesos1/empleadosJornada",id).subscribe({
       next: (datos:any) => {
         this.employeeJournals = datos;
       },
